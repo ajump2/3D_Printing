@@ -4,13 +4,13 @@ I'm running a modified Prusa i3 using two e3D v6s on a Bowden setup, originally 
 # Bowden Installation
 ## 3D-Printed Parts
 * 2 x [extruder mounts](https://www.thingiverse.com/thing:2078038)
-* [x-carriage mount](https://www.thingiverse.com/thing:1065471)
+* 2 x [x-carriage mount](https://www.thingiverse.com/thing:1065471)
 
-The x-carriage mount fits the standard Prusa i3 x-carriage, like the one modeled [here](https://www.thingiverse.com/thing:399130) (So no need to install a new x-carriage).
+The x-carriage mount fits the standard Prusa i3 x-carriage, like the one modeled [here](https://www.thingiverse.com/thing:399130) (So no need to install a new x-carriage). I'm also gonna suggest that you print two of the x-carriage mounts, in case one breaks.
 
 ## Materials
 * Additional Extruder motor (I repurposed the ones from [here](https://www.amazon.com/Geeetech-Dual-Extruder-hotend-nozzle/dp/B075TGY28F/ref=sr_1_1?s=industrial&ie=UTF8&qid=1514663493&sr=1-1&keywords=geeetech+extruder), and you can use the direct drive system if you'd like, although I had a number of issues with it)
-* [RRD fan extender](https://www.amazon.com/AuBreey-Extender-DUAL-EXTRUSION-Printer-Reprap/dp/B07115SX39/ref=sr_1_fkmr0_3?dd=8meGbv0H0ZUQmLQLSJfdzQ%2C%2C&ddc_refnmnt=pfod&ie=UTF8&qid=1514663427&sr=8-3-fkmr0&keywords=ramps+fan+extender&refinements=p_97%3A11292772011)
+* 1 x [RRD fan extender](https://www.amazon.com/AuBreey-Extender-DUAL-EXTRUSION-Printer-Reprap/dp/B07115SX39/ref=sr_1_fkmr0_3?dd=8meGbv0H0ZUQmLQLSJfdzQ%2C%2C&ddc_refnmnt=pfod&ie=UTF8&qid=1514663427&sr=8-3-fkmr0&keywords=ramps+fan+extender&refinements=p_97%3A11292772011)
 * 2 x [PTFE fittings](https://www.amazon.com/dp/B01F1XTRGI/ref=sxr_rr_xsim_1?pf_rd_m=ATVPDKIKX0DER&pf_rd_p=3008523062&pd_rd_wg=ZMOeN&pf_rd_r=46MJAA6X7F9JKQ17D5ET&pf_rd_s=desktop-rhs-carousels&pf_rd_t=301&pd_rd_i=B01F1XTRGI&pd_rd_w=6iyha&pf_rd_i=stepper+motor+cable&pd_rd_r=e7ea052b-b13e-4d06-9a6b-0f035aa68d9e&ie=UTF8&qid=1514663624&sr=1)
 * 2 x [e3d v6s](https://www.amazon.com/E3D-All-metal-HotEnd-Full-Approximately/dp/B00NAK9JFO/ref=sr_1_2?rps=1&ie=UTF8&qid=1514664069&sr=8-2&keywords=e3d&refinements=p_85%3A2470955011%2Cp_89%3AE3D)
 
@@ -18,6 +18,9 @@ Please note that while these parts satisfy the minimum requirement, redundancies
 
 ## Electronic/Mechanical Configuration
 In-Progress
+
+### Wiring
+![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/Ramps1_4.png)
 
 ## Firmware/Mechanical Configuration
 My marlin files are included in this repository, [here](https://github.com/ajump2/3D_Printing/tree/master/Marlin). Note that the second fan doesn't work (I believe it's a problem with my RRD board), which you can use [this](https://www.geeetech.com/wiki/index.php/Reprap_Ramps1.4_RRD_Fan_Extender) code to test.
@@ -260,7 +263,7 @@ Using Slicer or Cura, adjust your retraction distance to be as short as possible
 
 Before changing your unit steps in configuration.h, you should test to see if your extruders are working, and try a test using only one extruder.
 
-If underextruding, or the motor skips, or any problems with feeding; go to your ARMS Board and adjust the stepper drivers for the extruders. By turning the screws you increase the total current for the extruder motors, this is necessary when upgrading from direct drive as the filament has a longer distance to travel.
+If underextruding, or the motor skips, or any problems with feeding; go to your RAMPS Board and adjust the stepper drivers for the extruders. By turning the screws you increase the total current for the extruder motors, this is necessary when upgrading from direct drive as the filament has a longer distance to travel.
 
 If this fails, attempt changing heat settings (I've only tested PLA, and I'm running around 190-195C). If both of these steps fail, move on to the next step.
 
