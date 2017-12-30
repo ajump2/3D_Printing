@@ -20,9 +20,11 @@ Please note that while these parts satisfy the minimum requirement, redundancies
 In-Progress
 
 ### Wiring
-The RRD extender fits on the Servo 1 pins, where you can follow the below diagram for wiring.
+The RRD extender fits on the Aux 1 pins, where you can follow the below diagram for wiring.
 
 ![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/Ramps1_4.png)
+
+This frees the D9 pin (where the fan was connected) for use by the second extruder heater cartridge. As with the first extruder, polarity is not important. The extruder motor connects to the E1 pins (above where the first extruder is connected).
 
 ## Firmware/Mechanical Configuration
 My marlin files are included in this repository, [here](https://github.com/ajump2/3D_Printing/tree/master/Marlin). Note that the second fan doesn't work (I believe it's a problem with my RRD board), which you can use [this](https://www.geeetech.com/wiki/index.php/Reprap_Ramps1.4_RRD_Fan_Extender) code to test.
