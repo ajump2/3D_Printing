@@ -24,7 +24,9 @@ The RRD extender fits on the Aux 1 pins, where you can follow the below diagram 
 
 ![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/Ramps1_4.png)
 
-This frees the D9 pin (where the fan was connected) for use by the second extruder heater cartridge. As with the first extruder, polarity is not important. The extruder motor connects to the E1 pins (above where the first extruder is connected).
+This frees the D9 pin (where the fan was connected) for use by the second extruder heater cartridge. As with the first extruder, polarity is not important. The extruder motor connects to the E1 pins (above where the first extruder is connected). Then you'll want to connect the second extruders thermistor to space T2. This can all be seen in the below diagram.
+
+![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/ramps_schematic.png)
 
 ## Firmware/Mechanical Configuration
 My marlin files are included in this repository, [here](https://github.com/ajump2/3D_Printing/tree/master/Marlin). Note that the second fan doesn't work (I believe it's a problem with my RRD board), which you can use [this](https://www.geeetech.com/wiki/index.php/Reprap_Ramps1.4_RRD_Fan_Extender) code to test.
