@@ -14,6 +14,9 @@ I'm running a modified Prusa i3 using two e3D v6s on a Bowden setup, originally 
 
 Please note that while these parts satisfy the minimum requirement, redundancies are recommended. The e3D thermistors are sensitive, and can crack very easily. Also note that you'll want to heat the hot ends up before removing the heat breaks (which you'll have to do as you're troubleshooting).
 
+## Electronic/Mechanical Configuration
+In-Progress
+
 ## Firmware/Mechanical Configuration
 My marlin files are included in this repository, [here](https://github.com/ajump2/3D_Printing/tree/master/Marlin). Note that the second fan doesn't work (I believe it's a problem with my RRD board), which you can use [this](https://www.geeetech.com/wiki/index.php/Reprap_Ramps1.4_RRD_Fan_Extender) code to test.
 
@@ -48,7 +51,11 @@ You'll want to change your motherboard settings found in configuration.h
 
 Using Slicer or Cura, adjust your retraction distance to be as short as possible (1mm or so). Also make sure to run the fan at all times. You can do this by changing any M107 commands in your gcode to M106.
 
-Before changing your unit steps in configuration.h, you should test to see if your extruders are working, and try a test using only one extruder. If underextruding, or the motor skips, or any problems with feeding; go to your ARMS Board and adjust the stepper drivers for the extruders. By turning the screws, increase the total current for the extruder motors. If this fails, attempt changing heat settings. If both of these steps fail, move on to the next step.
+Before changing your unit steps in configuration.h, you should test to see if your extruders are working, and try a test using only one extruder.
+
+If underextruding, or the motor skips, or any problems with feeding; go to your ARMS Board and adjust the stepper drivers for the extruders. By turning the screws you increase the total current for the extruder motors, this is necessary when upgrading from direct drive as the filament has a longer distance to travel.
+
+If this fails, attempt changing heat settings (I've only tested PLA, and I'm running around 190-195C). If both of these steps fail, move on to the next step.
 
 It's also very likely you'll have to change your extruder steps per unit (no need to define for both extruders, defaults to both).
 
