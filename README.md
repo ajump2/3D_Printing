@@ -20,6 +20,8 @@ Please note that while these parts satisfy the minimum requirement, redundancies
 In-Progress
 
 ### Wiring
+The RRD extender fits on the Servo 1 pins, where you can follow the below diagram for wiring.
+
 ![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/Ramps1_4.png)
 
 ## Firmware/Mechanical Configuration
