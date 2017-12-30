@@ -4,7 +4,9 @@ I'm running a modified Prusa i3 using two e3D v6s on a Bowden setup, originally 
 # Bowden Installation
 ## 3D-Printed Parts
 * 2 x [extruder mounts](https://www.thingiverse.com/thing:2078038)
-* [x-carriage](https://www.thingiverse.com/thing:1065471)
+* [x-carriage mount](https://www.thingiverse.com/thing:1065471)
+
+The x-carriage mount fits the standard Prusa i3 x-carriage, like the one modeled [here](https://www.thingiverse.com/thing:399130) (So no need to install a new x-carriage).
 
 ## Materials
 * Additional Extruder motor (I repurposed the ones from [here](https://www.amazon.com/Geeetech-Dual-Extruder-hotend-nozzle/dp/B075TGY28F/ref=sr_1_1?s=industrial&ie=UTF8&qid=1514663493&sr=1-1&keywords=geeetech+extruder), and you can use the direct drive system if you'd like, although I had a number of issues with it)
