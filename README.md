@@ -1,7 +1,7 @@
 # Introduction
 I'm running a modified Prusa i3 using two e3D v6s on a Bowden setup, originally this printer was built from a reprapguru kit found [here](https://reprapguru.com/). Any and all gcode is made using Slicer or Cura, and modified using a text editor so the fan runs constantly.
 
-# Bowden Installation
+# Bowden Dual Extruder Installation
 ## 3D-Printed Parts
 * 2 x [extruder mounts](https://www.thingiverse.com/thing:2078038)
 * 2 x [x-carriage mount](https://www.thingiverse.com/thing:1065471)
@@ -27,6 +27,8 @@ The RRD extender fits on the Aux 1 pins, where you can follow the below diagram 
 This frees the D9 pin (where the fan was connected) for use by the second extruder heater cartridge. As with the first extruder, polarity is not important. The extruder motor connects to the E1 pins (above where the first extruder is connected). Then you'll want to connect the second extruders thermistor to space T2. This can all be seen in the below diagram.
 
 ![Alt Text](https://github.com/ajump2/3D_Printing/raw/master/Images/ramps_schematic.png)
+
+Other than the wiring shown here, the ramps board should be wired in the exact same way as for the single extruder setup.
 
 ## Firmware/Mechanical Configuration
 My marlin files are included in this repository, [here](https://github.com/ajump2/3D_Printing/tree/master/Marlin). Note that the second fan doesn't work (I believe it's a problem with my RRD board), which you can use [this](https://www.geeetech.com/wiki/index.php/Reprap_Ramps1.4_RRD_Fan_Extender) code to test.
